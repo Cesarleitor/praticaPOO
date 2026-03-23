@@ -16,7 +16,7 @@ class Cliente:
             self.plano = novo_plano
         else:
             print("Plano Inválido")
-    # ESOLHER FILME CONFORME O PLANO
+    # ESCOLHER FILME CONFORME O PLANO
     def ver_filme(self, filme, plano_filme):
 
         # SE O PLANO DO CLIENTE FOR O MESMO DO FILME, LIBERAR O FILME
