@@ -34,3 +34,19 @@ Exemplo de organização dos arquivos:
 projeto/
 │── cliente.py
 │── main.py
+
+## Testes manuais
+
+Atualmente, o projeto foi validado por meio de testes manuais, executando o arquivo principal e verificando o comportamento da classe `Cliente`.
+
+### Exemplo de teste
+
+```python
+from cliente import Cliente
+
+cliente = Cliente("Cesar", "cesar@gmail.com", "basic")
+print(cliente.nome)
+cliente.mudar_plano("premium")
+
+print(cliente.plano)
+cliente.ver_filme("Harry Potter", "premium")
