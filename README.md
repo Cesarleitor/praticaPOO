@@ -26,6 +26,22 @@ Este projeto foi criado com foco em aprendizado, para treinar:
 - Verificação de acesso a filmes conforme o tipo de plano
 - Mensagem de upgrade para usuários do plano básico
 
+- ## Testes manuais
+
+Atualmente, o projeto foi validado por meio de testes manuais, executando o arquivo principal e verificando o comportamento da classe `Cliente`.
+
+### Exemplo de teste
+
+
+from cliente import Cliente
+
+cliente = Cliente("Cesar", "cesar@gmail.com", "basic")
+print(cliente.nome)
+cliente.mudar_plano("premium")
+
+print(cliente.plano)
+cliente.ver_filme("Harry Potter", "premium")
+
 ## Estrutura do projeto
 
 Exemplo de organização dos arquivos:
@@ -34,3 +50,5 @@ Exemplo de organização dos arquivos:
 projeto/
 │── cliente.py
 │── main.py
+
+
