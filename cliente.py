@@ -1,8 +1,9 @@
 # PRATICA DE CLASS E POO
 
 class Cliente:
-    def __init__(self, nome, email, plano):
+    def __init__(self, nome, idade, email, plano):
         self.nome = nome
+        self.idade = int(idade)
         self.email = email
         self.lista_planos = ["basic", "premium"] # VARIÁVEL FIXA
         if plano in self.lista_planos:
@@ -27,10 +28,18 @@ class Cliente:
         elif self.plano == "premium":
             print(f"Ver Filme {filme}")
 
-        # SE O PLANO DO CLIENTE FOR BASIC E O FILME FOR DO PLANO PREMIUM, FAÇA UPGRADE PARA PLANO PREMIUM
+        # SE O PLANO DO CLIENTE FOR BASIC E O FILME FOR
+        # DO PLANO PREMIUM, FAÇA UPGRADE PARA PLANO PREMIUM
         elif self.plano == "basic" and plano_filme == "premium":
             print("Faça Upgrade para premium para ver esse filme!")
 
         # SE NENHUMA DAS ALTERNATIVAS FOREM VALIDADAS. "PLANO INVÁLIDO"
         else:
             print("Plano Inválido!")
+
+    # RESTRIÇÃO DE FILMES PARA MENORES DE 18 ANOS
+    def restricao(self, idade):
+        if self.idade >= 18:
+            print("Filme Liberado!")
+        else:
+            print("Conteúdo proibido para menores de 18 anos!")
